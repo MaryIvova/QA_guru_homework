@@ -1,0 +1,27 @@
+{
+  "name": "qa_guru_homework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaryIvova/QA_guru_homework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaryIvova/QA_guru_homework/issues"
+  },
+  "homepage": "https://github.com/MaryIvova/QA_guru_homework#readme",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2"
+  },
+  "dependencies": {
+    "allure": "^3.0.0-beta.18",
+    "allure-playwright": "^3.4.1"
+  }
+}
