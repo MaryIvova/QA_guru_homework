@@ -1,0 +1,92 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic:
+        - link "conduit" [ref=e5] [cursor=pointer]:
+          - /url: "#/"
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link " Source code" [ref=e8] [cursor=pointer]:
+              - /url: https://github.com/TonyMckes/conduit-realworld-example-app
+              - generic [ref=e9]: 
+              - text: Source code
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link " Home" [ref=e12] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e13]: 
+              - text: Home
+          - listitem [ref=e14]:
+            - link " New Article" [ref=e15] [cursor=pointer]:
+              - /url: "#/editor"
+              - generic [ref=e16]: 
+              - text: New Article
+          - listitem [ref=e17]:
+            - generic [ref=e18] [cursor=pointer]:
+              - img "mary" [ref=e19]
+              - text: mary
+            - text:   
+  - main [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e25]:
+        - img "mary" [ref=e26]
+        - heading "mary" [level=4] [ref=e27]
+        - link " Edit Profile Settings" [ref=e28] [cursor=pointer]:
+          - /url: "#/settings"
+          - generic [ref=e29]: 
+          - text: Edit Profile Settings
+      - generic [ref=e32]:
+        - list [ref=e34]:
+          - listitem [ref=e35]:
+            - link "My Articles" [ref=e36] [cursor=pointer]:
+              - /url: "#/profile/mary"
+          - listitem [ref=e37]:
+            - link "Favorited Articles" [active] [ref=e38]:
+              - /url: "#/profile/mary/favorites"
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - link "sniper" [ref=e41] [cursor=pointer]:
+              - /url: "#/profile/sniper"
+              - img "sniper" [ref=e42]
+            - generic [ref=e43]:
+              - link "sniper" [ref=e44] [cursor=pointer]:
+                - /url: "#/profile/sniper"
+              - generic [ref=e45]: August 22, 2024
+            - button " ( 4 )" [ref=e46] [cursor=pointer]:
+              - generic [ref=e47]: 
+              - generic [ref=e48]: ( 4 )
+          - link "Здесь могла бы быть ваша реклама Парадокс Пиноккио Read more... реклама" [ref=e49] [cursor=pointer]:
+            - /url: "#/article/--------------------------------"
+            - heading "Здесь могла бы быть ваша реклама" [level=1] [ref=e50]
+            - paragraph [ref=e51]: Парадокс Пиноккио
+            - text: Read more...
+            - list [ref=e52]:
+              - listitem [ref=e53]: реклама
+        - navigation "Pagination" [ref=e54]:
+          - listitem [ref=e55]:
+            - button "Previous page" [disabled]:
+              - generic: 
+          - listitem [ref=e56]:
+            - button "Page 1 is your current page" [ref=e57]: "1"
+          - listitem [ref=e58]:
+            - button "Next page" [disabled]:
+              - generic: 
+  - contentinfo [ref=e59]:
+    - generic [ref=e60]:
+      - link "conduit" [ref=e61] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e62]:
+        - text: An interactive learning project from
+        - link "Thinkster" [ref=e63] [cursor=pointer]:
+          - /url: https://thinkster.io
+        - text: . Code & design licensed under MIT.
+      - list [ref=e64]:
+        - listitem [ref=e65]:
+          - link " Source code" [ref=e66] [cursor=pointer]:
+            - /url: https://github.com/TonyMckes/conduit-realworld-example-app
+            - generic [ref=e67]: 
+            - text: Source code
+```

@@ -7,7 +7,6 @@ export class MyArticlesPage {
     this.userButton = page.locator('//*[@class="nav-link dropdown-toggle cursor-pointer"]');
     this.dropDownProfile = page.locator('//*[@class="dropdown-menu"]');
     this.buttonProfile = page.locator('.ion-person').locator('..');
-    //this.articlePreview = page.locator('//*[text() = "pleasant"]');
   }
   getArticlePreview = () => {
     return this.page.locator(`//*[text()='${text}']`);

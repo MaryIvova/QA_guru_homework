@@ -1,0 +1,21 @@
+import { expect } from '@playwright/test';
+
+export class FavoritesPage {
+  constructor(page) {
+    this.page = page;
+    this.buttonFavorites = page.locator('a.nav-link:has-text("Favorited")');
+    this.article = (text) => page.locator(`.article-preview:has-text("${text}")`);
+    this.likeButton = (title) => this.article(title).locator('button.btn-outline-primary');
+  }
+
+  async checkFavorites(title) {
+    await this.buttonFavorites.click();
+    await expect(this.article(title)).toBeVisible();
+    await expect(this.likeButton(title)).toHaveClass(/active/);
+  }
+
+  async unLikeArticle(title) {
+    await this.likeButton(title).click();
+    await expect(this.likeButton(title)).not.toHaveClass(/active/);
+  }
+}

@@ -1,8 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { test, expect } from '@playwright/test';
-import { ArticleCreation, MyArticlesPage, ArticleEdit, LogInPage } from '../../src/pages/index';
-
-// Or create the file '../src/pages/mainPage.js' if it does not exist.
+import { ArticleCreation, MyArticlesPage, ArticleEdit, LogInPage } from '../src/pages/index';
 
 const URL = 'https://realworld.qa.guru';
 
@@ -16,7 +14,7 @@ test.describe('Логин', () => {
     await expect(page).toHaveURL('https://realworld.qa.guru/#/');
   });
 
-  test.only('Delete My articles', async ({ page }) => {
+  test('Delete My articles', async ({ page }) => {
     const article = {
       title: faker.word.adjective(),
       description: faker.word.adjective(),

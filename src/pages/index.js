@@ -4,3 +4,6 @@ export * from './createArticlePage';
 export * from './myArticlesPage';
 export * from './articlePage';
 export * from './homePage';
+export * from './settingsPage';
+export * from './favoritesPage';
+export * from './profilePage';

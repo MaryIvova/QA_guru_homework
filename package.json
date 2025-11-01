@@ -2,7 +2,12 @@
   "name": "qa_guru_homework",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "testUI": "npx playwright test --ui",
+    "report": "npx playwright show-report",
+    "allureFile": "npx allure awesome ./allure-results --single-file"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaryIvova/QA_guru_homework.git"

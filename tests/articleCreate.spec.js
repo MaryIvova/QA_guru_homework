@@ -1,7 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { test, expect } from '@playwright/test';
-import { LogInPage } from '../../src/pages/logIn.Page';
-import { ArticleCreation, MyArticlesPage } from '../../src/pages/index';
+import { LogInPage, ArticleCreation, MyArticlesPage } from '../src/pages/index';
 
 // Or create the file '../src/pages/mainPage.js' if it does not exist.
 
