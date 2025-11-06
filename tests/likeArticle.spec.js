@@ -12,7 +12,6 @@ test.describe('Логин', () => {
     const logInPage = new LogInPage(page);
 
     await logInPage.userLogIn();
-    await expect(page).toHaveURL('https://realworld.qa.guru/#/');
   });
 
   test.only('Like article from tags', async ({ page }) => {

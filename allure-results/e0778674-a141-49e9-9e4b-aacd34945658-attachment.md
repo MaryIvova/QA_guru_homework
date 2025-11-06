@@ -1,0 +1,203 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic:
+        - link "conduit" [ref=e5] [cursor=pointer]:
+          - /url: "#/"
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link " Source code" [ref=e8] [cursor=pointer]:
+              - /url: https://github.com/TonyMckes/conduit-realworld-example-app
+              - generic [ref=e9]: 
+              - text: Source code
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link " Home" [ref=e12] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e13]: 
+              - text: Home
+          - listitem [ref=e14]:
+            - link " New Article" [ref=e15] [cursor=pointer]:
+              - /url: "#/editor"
+              - generic [ref=e16]: 
+              - text: New Article
+          - listitem [ref=e17]:
+            - generic [ref=e18] [cursor=pointer]:
+              - img "mary" [ref=e19]
+              - text: mary
+            - text:   
+  - main [ref=e20]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - button "Your Feed" [ref=e28] [cursor=pointer]
+          - listitem [ref=e29]:
+            - button "Global Feed" [ref=e30] [cursor=pointer]
+          - listitem [ref=e31]:
+            - button " реклама" [ref=e32]:
+              - generic [ref=e33]: 
+              - text: реклама
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - link "Teodor Ruzvelt" [ref=e36] [cursor=pointer]:
+              - /url: "#/profile/Teodor Ruzvelt"
+              - img "Teodor Ruzvelt" [ref=e37]
+            - generic [ref=e38]:
+              - link "Teodor Ruzvelt" [ref=e39] [cursor=pointer]:
+                - /url: "#/profile/Teodor Ruzvelt"
+              - generic [ref=e40]: October 4, 2025
+            - button " ( 0 )" [ref=e41] [cursor=pointer]:
+              - generic [ref=e42]: 
+              - generic [ref=e43]: ( 0 )
+          - link "valetudo Vulariter conicio audacia surgo. Read more... animal cats dogs love реклама" [ref=e44] [cursor=pointer]:
+            - /url: "#/article/valetudo"
+            - heading "valetudo" [level=1] [ref=e45]
+            - paragraph [ref=e46]: Vulariter conicio audacia surgo.
+            - text: Read more...
+            - list [ref=e47]:
+              - listitem [ref=e48]: animal
+              - listitem [ref=e49]: cats
+              - listitem [ref=e50]: dogs
+              - listitem [ref=e51]: love
+              - listitem [ref=e52]: реклама
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - link "Teodor Ruzvelt" [ref=e55] [cursor=pointer]:
+              - /url: "#/profile/Teodor Ruzvelt"
+              - img "Teodor Ruzvelt" [ref=e56]
+            - generic [ref=e57]:
+              - link "Teodor Ruzvelt" [ref=e58] [cursor=pointer]:
+                - /url: "#/profile/Teodor Ruzvelt"
+              - generic [ref=e59]: October 4, 2025
+            - button " ( 0 )" [ref=e60] [cursor=pointer]:
+              - generic [ref=e61]: 
+              - generic [ref=e62]: ( 0 )
+          - link "aureus Deduco vociferor voluptatum cimentarius arbitro. Attollo talis deficio umerus acceptus vito. Degenero quam volutabrum ratione vulnus inflammatio voluptatum avarus aeger. Read more... animal cats dogs love реклама" [ref=e63] [cursor=pointer]:
+            - /url: "#/article/aureus"
+            - heading "aureus" [level=1] [ref=e64]
+            - paragraph [ref=e65]: Deduco vociferor voluptatum cimentarius arbitro. Attollo talis deficio umerus acceptus vito. Degenero quam volutabrum ratione vulnus inflammatio voluptatum avarus aeger.
+            - text: Read more...
+            - list [ref=e66]:
+              - listitem [ref=e67]: animal
+              - listitem [ref=e68]: cats
+              - listitem [ref=e69]: dogs
+              - listitem [ref=e70]: love
+              - listitem [ref=e71]: реклама
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - link "Teodor Ruzvelt" [ref=e74] [cursor=pointer]:
+              - /url: "#/profile/Teodor Ruzvelt"
+              - img "Teodor Ruzvelt" [ref=e75]
+            - generic [ref=e76]:
+              - link "Teodor Ruzvelt" [ref=e77] [cursor=pointer]:
+                - /url: "#/profile/Teodor Ruzvelt"
+              - generic [ref=e78]: October 4, 2025
+            - button " ( 0 )" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: 
+              - generic [ref=e81]: ( 0 )
+          - link "cotidie Admoveo angustus desino timor. Decet thermae vicissitudo teres ultra accusantium canonicus socius stultus enim. Tener arca vorago. Read more... animal cats dogs love реклама" [ref=e82] [cursor=pointer]:
+            - /url: "#/article/cotidie"
+            - heading "cotidie" [level=1] [ref=e83]
+            - paragraph [ref=e84]: Admoveo angustus desino timor. Decet thermae vicissitudo teres ultra accusantium canonicus socius stultus enim. Tener arca vorago.
+            - text: Read more...
+            - list [ref=e85]:
+              - listitem [ref=e86]: animal
+              - listitem [ref=e87]: cats
+              - listitem [ref=e88]: dogs
+              - listitem [ref=e89]: love
+              - listitem [ref=e90]: реклама
+        - navigation "Pagination" [ref=e91]:
+          - listitem [ref=e92]:
+            - button "Previous page" [ref=e93] [cursor=pointer]:
+              - generic [ref=e94]: 
+          - listitem [ref=e95]:
+            - button "Page 1" [ref=e96] [cursor=pointer]: "1"
+          - listitem [ref=e97]:
+            - button "Page 2" [ref=e98] [cursor=pointer]: "2"
+          - listitem [ref=e99]:
+            - button "Page 3" [ref=e100] [cursor=pointer]: "3"
+          - listitem [ref=e101]:
+            - button "..." [ref=e102] [cursor=pointer]
+          - listitem [ref=e103]:
+            - button "Page 18" [ref=e104] [cursor=pointer]: "18"
+          - listitem [ref=e105]:
+            - button "Page 19" [ref=e106] [cursor=pointer]: "19"
+          - listitem [ref=e107]:
+            - button "Page 20 is your current page" [active] [ref=e108]: "20"
+          - listitem [ref=e109]:
+            - button "Next page" [disabled]:
+              - generic: 
+      - complementary [ref=e110]:
+        - generic [ref=e111]:
+          - heading "Popular Tags" [level=6] [ref=e112]
+          - generic [ref=e113]:
+            - button "реклама" [ref=e114] [cursor=pointer]
+            - button "autus" [ref=e115] [cursor=pointer]
+            - button "iste" [ref=e116] [cursor=pointer]
+            - button "tripudio" [ref=e117] [cursor=pointer]
+            - button "amplus" [ref=e118] [cursor=pointer]
+            - button "inflammatio" [ref=e119] [cursor=pointer]
+            - button "ver" [ref=e120] [cursor=pointer]
+            - button "umbra" [ref=e121] [cursor=pointer]
+            - button "apto" [ref=e122] [cursor=pointer]
+            - button "bestia" [ref=e123] [cursor=pointer]
+            - button "placeat" [ref=e124] [cursor=pointer]
+            - button "vinitor" [ref=e125] [cursor=pointer]
+            - button "asporto" [ref=e126] [cursor=pointer]
+            - button "aestivus" [ref=e127] [cursor=pointer]
+            - button "armarium" [ref=e128] [cursor=pointer]
+            - button "adfectus" [ref=e129] [cursor=pointer]
+            - button "conduco" [ref=e130] [cursor=pointer]
+            - button "acsi" [ref=e131] [cursor=pointer]
+            - button "timor" [ref=e132] [cursor=pointer]
+            - button "bene" [ref=e133] [cursor=pointer]
+            - button "sortitus" [ref=e134] [cursor=pointer]
+            - button "sumo" [ref=e135] [cursor=pointer]
+            - button "ustilo" [ref=e136] [cursor=pointer]
+            - button "sperno" [ref=e137] [cursor=pointer]
+            - button "trepide" [ref=e138] [cursor=pointer]
+            - button "perferendis" [ref=e139] [cursor=pointer]
+            - button "clamo" [ref=e140] [cursor=pointer]
+            - button "videlicet" [ref=e141] [cursor=pointer]
+            - button "cognatus" [ref=e142] [cursor=pointer]
+            - button "vulgus" [ref=e143] [cursor=pointer]
+            - button "voluptate" [ref=e144] [cursor=pointer]
+            - button "consuasor" [ref=e145] [cursor=pointer]
+            - button "denego" [ref=e146] [cursor=pointer]
+            - button "conscendo" [ref=e147] [cursor=pointer]
+            - button "tergum" [ref=e148] [cursor=pointer]
+            - button "volutabrum" [ref=e149] [cursor=pointer]
+            - button "verto" [ref=e150] [cursor=pointer]
+            - button "cras" [ref=e151] [cursor=pointer]
+            - button "capto" [ref=e152] [cursor=pointer]
+            - button "peccatus" [ref=e153] [cursor=pointer]
+            - button "subito" [ref=e154] [cursor=pointer]
+            - button "confido" [ref=e155] [cursor=pointer]
+            - button "subnecto" [ref=e156] [cursor=pointer]
+            - button "creber" [ref=e157] [cursor=pointer]
+            - button "abduco" [ref=e158] [cursor=pointer]
+            - button "suggero" [ref=e159] [cursor=pointer]
+            - button "vallum" [ref=e160] [cursor=pointer]
+            - button "terra" [ref=e161] [cursor=pointer]
+            - button "alienus" [ref=e162] [cursor=pointer]
+            - button "vetus" [ref=e163] [cursor=pointer]
+  - contentinfo [ref=e164]:
+    - generic [ref=e165]:
+      - link "conduit" [ref=e166] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e167]:
+        - text: An interactive learning project from
+        - link "Thinkster" [ref=e168] [cursor=pointer]:
+          - /url: https://thinkster.io
+        - text: . Code & design licensed under MIT.
+      - list [ref=e169]:
+        - listitem [ref=e170]:
+          - link " Source code" [ref=e171] [cursor=pointer]:
+            - /url: https://github.com/TonyMckes/conduit-realworld-example-app
+            - generic [ref=e172]: 
+            - text: Source code
+```

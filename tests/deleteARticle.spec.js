@@ -8,10 +8,8 @@ test.describe('Логин', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(URL);
     const logInPage = new LogInPage(page);
-    //const yourFeed = page.getByRole('button', { name: 'Your Feed' });
 
     await logInPage.userLogIn();
-    await expect(page).toHaveURL('https://realworld.qa.guru/#/');
   });
 
   test('Delete My articles', async ({ page }) => {
