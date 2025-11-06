@@ -37,11 +37,5 @@ export class ArticleEdit extends MyArticlesPage {
     await button.click();
   }
 
-  async checkDeletedArticle(article) {
-    await this.userButton.click();
-    await expect(this.dropDownProfile).toBeVisible();
-    await this.buttonProfile.click();
-    const locator = this.getArticlePreview(article.title);
-    await expect(locator).toBeHidden();
-  }
+
 }

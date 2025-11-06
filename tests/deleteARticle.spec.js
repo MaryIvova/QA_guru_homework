@@ -1,6 +1,12 @@
 import { faker } from '@faker-js/faker';
 import { test, expect } from '@playwright/test';
-import { ArticleCreation, MyArticlesPage, ArticleEdit, LogInPage } from '../src/pages/index';
+import {
+  ArticleCreation,
+  MyArticlesPage,
+  ArticleEdit,
+  LogInPage,
+  ProfilePage,
+} from '../src/pages/index';
 
 const URL = 'https://realworld.qa.guru';
 
@@ -23,11 +29,17 @@ test.describe('Логин', () => {
     const newArticle = new ArticleCreation(page);
     await newArticle.createArticle(article);
 
+    const profile = new ProfilePage(page);
+    await profile.pageProfileopen();
+
     const myArticlesPage = new MyArticlesPage(page);
     await myArticlesPage.checkCreatedArticle(article);
+    await expect(myArticlesPage.locator).toHaveText(article.title);
 
     const editArticte = new ArticleEdit(page);
     await editArticte.deleteArticle(article);
-    await editArticte.checkDeletedArticle(article);
+
+    const deletedArticle = new MyArticlesPage(page);
+    await deletedArticle.checkDeletedArticle(article);
   });
 });

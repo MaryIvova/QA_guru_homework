@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import { test, expect } from '@playwright/test';
-import { LogInPage, ArticleCreation, MyArticlesPage } from '../src/pages/index';
+import { LogInPage, ArticleCreation, MyArticlesPage, ProfilePage } from '../src/pages/index';
 
 // Or create the file '../src/pages/mainPage.js' if it does not exist.
 
@@ -10,7 +10,6 @@ test.describe('Логин', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(URL);
     const logInPage = new LogInPage(page);
-
     await logInPage.userLogIn();
   });
 
@@ -21,12 +20,10 @@ test.describe('Логин', () => {
       text: faker.lorem.lines(3),
       tags: faker.word.adjective(),
     };
-    const articleTT = page.locator('//*[class="col-md-12"]');
 
     const newArticle = new ArticleCreation(page);
     await newArticle.createArticle(article);
-
-    expect(articleTT).toBeVisible;
+    expect(newArticle.articleTT).toBeVisible;
   });
 
   test('Check My articles', async ({ page }) => {
@@ -39,7 +36,11 @@ test.describe('Логин', () => {
     const newArticle = new ArticleCreation(page);
     await newArticle.createArticle(article);
 
+    const profile = new ProfilePage(page);
+    await profile.pageProfileopen();
+
     const myArticlesPage = new MyArticlesPage(page);
     await myArticlesPage.checkCreatedArticle(article.title);
+    await expect(myArticlesPage.locator).toHaveText(article.title);
   });
 });

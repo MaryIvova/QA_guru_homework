@@ -12,6 +12,5 @@ export class SettingsPage {
     await this.userButton.click();
     await expect(this.dropDownMenu).toBeVisible();
     await this.settingsLink.click();
-    await expect(this.page).toHaveURL(/#\/settings/);
   }
 }

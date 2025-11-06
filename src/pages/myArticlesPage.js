@@ -12,10 +12,15 @@ export class MyArticlesPage {
     return this.page.locator(`//*[text()='${text}']`);
   };
   async checkCreatedArticle(article) {
+    const locator = this.getArticlePreview(article.title);
+    await expect(locator).toHaveText(article.title);
+  }
+
+  async checkDeletedArticle(article) {
     await this.userButton.click();
     await expect(this.dropDownProfile).toBeVisible();
     await this.buttonProfile.click();
     const locator = this.getArticlePreview(article.title);
-    await expect(locator).toHaveText(article.title);
+    await expect(locator).toBeHidden();
   }
 }

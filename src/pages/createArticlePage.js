@@ -9,6 +9,7 @@ export class ArticleCreation {
     this.articleText = page.locator('[name="body"]');
     this.articleTags = page.locator('[name="tags"]');
     this.publishButton = page.locator('//*[@class="btn btn-lg pull-xs-right btn-primary"]');
+    this.articleTT = page.locator('//*[class="col-md-12"]');
   }
 
   async createArticle(article) {
