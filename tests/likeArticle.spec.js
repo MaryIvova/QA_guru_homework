@@ -17,8 +17,11 @@ test.describe('Логин', () => {
   test.only('Like article from tags', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.openTag('реклама');
+    await expect(homePage.pagination).toBeVisible();
     await homePage.openPage(lastPage, articleTitle);
+    await expect(homePage.article(articleTitle)).toBeVisible();
     await homePage.likeArticle(articleTitle);
+    await expect(homePage.likeButton(articleTitle)).toHaveClass(/active/);
 
     const profile = new ProfilePage(page);
     await profile.pageProfileopen();

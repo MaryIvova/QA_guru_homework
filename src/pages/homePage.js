@@ -17,7 +17,6 @@ export class HomePage {
 
   async openTag(tag) {
     await this.getTagByText(tag).click();
-    await expect(this.pagination).toBeVisible();
   }
 
   async openPage(pageNumber, title) {
@@ -26,11 +25,9 @@ export class HomePage {
       `.page-item.active >> a[aria-label*="Page ${pageNumber}"]`,
     );
     await expect(activePage).toBeVisible();
-    await expect(this.article(title)).toBeVisible();
   }
 
   async likeArticle(title) {
     await this.likeButton(title).click();
-    await expect(this.likeButton(title)).toHaveClass(/active/);
   }
 }

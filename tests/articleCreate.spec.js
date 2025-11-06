@@ -2,8 +2,6 @@ import { faker } from '@faker-js/faker';
 import { test, expect } from '@playwright/test';
 import { LogInPage, ArticleCreation, MyArticlesPage, ProfilePage } from '../src/pages/index';
 
-// Or create the file '../src/pages/mainPage.js' if it does not exist.
-
 const URL = 'https://realworld.qa.guru';
 
 test.describe('Логин', () => {
