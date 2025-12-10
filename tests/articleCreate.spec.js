@@ -38,7 +38,8 @@ test.describe('Логин', () => {
     await profile.pageProfileopen();
 
     const myArticlesPage = new MyArticlesPage(page);
-    await myArticlesPage.checkCreatedArticle(article.title);
-    await expect(myArticlesPage.locator).toHaveText(article.title);
+    await myArticlesPage.checkCreatedArticle(article);
+    const locator = myArticlesPage.getArticlePreview(article.title);
+    await expect(locator).toHaveText(article.title);
   });
 });

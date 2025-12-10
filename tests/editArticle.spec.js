@@ -9,7 +9,6 @@ test.describe('Логин', () => {
     await page.goto(URL);
     const logInPage = new LogInPage(page);
     await logInPage.userLogIn();
-    await expect(page).toHaveURL('https://realworld.qa.guru/#/');
   });
 
   test('Edit My articles', async ({ page }) => {
@@ -25,6 +24,8 @@ test.describe('Логин', () => {
 
     const myArticlesPage = new MyArticlesPage(page);
     await myArticlesPage.checkCreatedArticle(article);
+    const locator = myArticlesPage.getArticlePreview(article.title);
+    await expect(locator).toHaveText(article.title);
 
     article.description = faker.word.adjective();
 

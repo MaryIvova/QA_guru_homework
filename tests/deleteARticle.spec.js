@@ -14,11 +14,10 @@ test.describe('Логин', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(URL);
     const logInPage = new LogInPage(page);
-
     await logInPage.userLogIn();
   });
 
-  test('Delete My articles', async ({ page }) => {
+  test.only('Delete My articles', async ({ page }) => {
     const article = {
       title: faker.word.adjective(),
       description: faker.word.adjective(),
@@ -34,12 +33,15 @@ test.describe('Логин', () => {
 
     const myArticlesPage = new MyArticlesPage(page);
     await myArticlesPage.checkCreatedArticle(article);
-    await expect(myArticlesPage.locator).toHaveText(article.title);
+    const locator = myArticlesPage.getArticlePreview(article.title);
+    await expect(locator).toHaveText(article.title);
 
     const editArticte = new ArticleEdit(page);
     await editArticte.deleteArticle(article);
 
     const deletedArticle = new MyArticlesPage(page);
     await deletedArticle.checkDeletedArticle(article);
+    const locator2 = myArticlesPage.getArticlePreview(article.title);
+    await expect(locator2).toBeHidden();
   });
 });

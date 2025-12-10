@@ -3,22 +3,22 @@ import { test, expect } from '@playwright/test';
 import { LogInPage, HomePage, FavoritesPage, ProfilePage } from '../src/pages/index';
 
 const URL = 'https://realworld.qa.guru';
-const lastPage = 20;
+const lastPage = 29;
 const articleTitle = 'Здесь могла бы быть ваша реклама';
 
 test.describe('Логин', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto(URL);
     const logInPage = new LogInPage(page);
-
     await logInPage.userLogIn();
   });
 
-  test.only('Like article from tags', async ({ page }) => {
+  test('Like article from tags', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.openTag('реклама');
     await expect(homePage.pagination).toBeVisible();
     await homePage.openPage(lastPage, articleTitle);
+    //await expect(homePage.activePageButton(lastPage)).toBeVisible();
     await expect(homePage.article(articleTitle)).toBeVisible();
     await homePage.likeArticle(articleTitle);
     await expect(homePage.likeButton(articleTitle)).toHaveClass(/active/);
@@ -28,6 +28,7 @@ test.describe('Логин', () => {
 
     const favorites = new FavoritesPage(page);
     await favorites.checkFavorites(articleTitle);
+    await expect(favorites.article(articleTitle)).toBeVisible();
     await expect(favorites.likeButton(articleTitle)).toHaveClass(/active/);
   });
 

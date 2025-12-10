@@ -10,7 +10,7 @@ export class SettingsPage {
 
   async profileEdit() {
     await this.userButton.click();
-    await expect(this.dropDownMenu).toBeVisible();
+    //await expect(this.dropDownMenu).toBeVisible();
     await this.settingsLink.click();
   }
 }

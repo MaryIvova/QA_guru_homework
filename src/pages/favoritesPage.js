@@ -10,7 +10,6 @@ export class FavoritesPage {
 
   async checkFavorites(title) {
     await this.buttonFavorites.click();
-    await expect(this.article(title)).toBeVisible();
   }
 
   async unLikeArticle(title) {
