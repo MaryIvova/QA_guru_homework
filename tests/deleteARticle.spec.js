@@ -40,8 +40,9 @@ test.describe('Логин', () => {
     await editArticte.deleteArticle(article);
 
     const deletedArticle = new MyArticlesPage(page);
-    await deletedArticle.checkDeletedArticle(article);
     const locator2 = myArticlesPage.getArticlePreview(article.title);
+    await expect(locator2).toHaveText(article.title);
+    await deletedArticle.checkDeletedArticle(article);
     await expect(locator2).toBeHidden();
   });
 });

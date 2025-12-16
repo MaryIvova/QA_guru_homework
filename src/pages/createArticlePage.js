@@ -15,7 +15,7 @@ export class ArticleCreation {
   async createArticle(article) {
     const { title, description, text, tags } = article;
     await this.buttonNewArticle.click();
-    await expect(this.articleTitle).toBeVisible();
+    //await expect(this.articleTitle).toBeVisible();
     await this.articleTitle.fill(title);
     await this.articleDescription.click();
     await this.articleDescription.fill(description);

@@ -16,7 +16,6 @@ export class ArticleEdit extends MyArticlesPage {
   };
   async editCreatedArticle(article) {
     const locator = this.getArticlePreview(article.title);
-    await expect(locator).toHaveText(article.title);
     await locator.click();
     await expect(this.buttonEdit).toBeVisible();
     await this.buttonEdit.click();
@@ -27,7 +26,6 @@ export class ArticleEdit extends MyArticlesPage {
 
   async deleteArticle(article) {
     const locator = this.getArticlePreview(article.title);
-    await expect(locator).toHaveText(article.title);
     await locator.click();
     const button = this.buttonDelete;
     this.page.once('dialog', (dialog) => {
@@ -36,6 +34,4 @@ export class ArticleEdit extends MyArticlesPage {
     });
     await button.click();
   }
-
-
 }

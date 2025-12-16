@@ -30,6 +30,8 @@ test.describe('Логин', () => {
     article.description = faker.word.adjective();
 
     const editArticte = new ArticleEdit(page);
+    const locator2 = editArticte.getArticlePreview(article.title);
+    await expect(locator2).toHaveText(article.title);
     await editArticte.editCreatedArticle(article);
   });
 });
